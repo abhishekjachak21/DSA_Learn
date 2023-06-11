@@ -3,17 +3,17 @@
 using namespace std;
 
 
-/*
-bool checkAllAlphabetes(string s){
 
-if(s.size()<26) return false;
+bool checkAllAlphabetes(string str){
+
+if(str.size()<26) return false;
 
 //function to make equal changes for whole  
 // transform(first1, last1, first2, result, op);
-transform(s.begin(),s.end(),s.begin(),::tolower);
+transform(str.begin(),str.end(),str.begin(),::tolower);
 
 set<char>ch;
-   for(auto ele:s)
+   for(auto ele:str)
    ch.insert(ele);
 
    return(ch.size()==26);
@@ -31,7 +31,7 @@ int main(){
     else cout<< "Nope";
 
 }
-*/
+
 
 
 
