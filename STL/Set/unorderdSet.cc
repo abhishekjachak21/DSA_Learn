@@ -11,6 +11,7 @@ int main(){
    cout<<endl; 
 
    love.insert(3);
+   love.insert(3);
    love.insert(2);   //so i think values insertes are like FIFO
    love.insert(10);   //new values at begin
 
