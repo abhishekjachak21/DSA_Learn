@@ -3,17 +3,19 @@
 using namespace std;
 
 
+/*
+//Q=> check if all alphabets are present
 
-bool checkAllAlphabetes(string str){
+bool checkAllAlphabetes(string s){
 
-if(str.size()<26) return false;
+if(s.size()<26) return false;
 
 //function to make equal changes for whole  
 // transform(first1, last1, first2, result, op);
-transform(str.begin(),str.end(),str.begin(),::tolower);
+transform(s.begin(),s.end(),s.begin(),::tolower);
 
 set<char>ch;
-   for(auto ele:str)
+   for(auto ele:s)
    ch.insert(ele);
 
    return(ch.size()==26);
@@ -31,7 +33,7 @@ int main(){
     else cout<< "Nope";
 
 }
-
+*/
 
 
 
