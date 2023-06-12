@@ -4,24 +4,24 @@ using namespace std ;
 
 int main(){
 
-   unordered_set<int>love={4,5,8,1,2,4,5,5,5,7};
+   unordered_set<int>unSet={4,5,8,1,2,4,5,5,5,7};
 
-   for(auto i:love)
+   for(auto i:unSet)
     cout<<i<<" ";
    cout<<endl; 
 
-   love.insert(3);
-   love.insert(3);
-   love.insert(2);   //so i think values insertes are like FIFO
-   love.insert(10);   //new values at begin
+   unSet.insert(3);
+   unSet.insert(3);
+   unSet.insert(2);   //so i think values insertes are like FIFO
+   unSet.insert(10);   //new values at begin
 
-   for(auto i:love)
+   for(auto i:unSet)
     cout<<i<<" ";
    cout<<endl; 
 
-   love.erase(5);
+   unSet.erase(5);
 
-   for(auto i:love)
+   for(auto i:unSet)
     cout<<i<<" ";
    cout<<endl; 
 
