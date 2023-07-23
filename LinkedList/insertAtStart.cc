@@ -50,6 +50,9 @@ int main(){
 
  insAtStart(head,1);
  print(head);
+
+ insAtStart(head,000000);
+ print(head);
    
 
 }
