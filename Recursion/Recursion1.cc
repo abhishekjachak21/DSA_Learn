@@ -104,10 +104,11 @@ int main(){
 int fibo(int n){
     if(n==0 || n==1) return n;
     // if( n==2) return 1;
-    int pA1=fibo(n-1);
-    int pA2=fibo(n-2);
-    // return (fibo(n-1)+fibo(n-2));
-    return (pA1+pA2);
+    // int pA1=fibo(n-1);
+    // int pA2=fibo(n-2);
+    int retAns = (fibo(n-1)+fibo(n-2));
+    return retAns;
+    // return (pA1+pA2);
 }
 
 int main(){

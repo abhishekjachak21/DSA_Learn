@@ -4,9 +4,9 @@ using namespace std ;
 
 
 
+
 ///-----------------------------------------------
 ///lec15 sortedSquaredArray
-#include<vector>
 void sortSqArr(vector<int> &vec){
 
   vector<int>ans;

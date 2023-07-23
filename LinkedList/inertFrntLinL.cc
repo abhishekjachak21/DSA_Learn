@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-/* ----- Linked list Node  ------ */
+// Linked list Node 
 struct node{
     int data;
     node *next;
 };
 
-/* -------  Print the Linked List  -------*/
+// Print the Linked List  
 void printList (node *n){
     while(n!=NULL){
         cout<<n->data<<endl;
