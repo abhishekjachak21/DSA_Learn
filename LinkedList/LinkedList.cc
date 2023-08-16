@@ -2,6 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//1 April 2023
 struct node{
     string data;
     node* next;

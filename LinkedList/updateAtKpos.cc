@@ -1,3 +1,4 @@
+
 #include<iostream>
 using namespace std;
 
@@ -12,11 +13,17 @@ class Node{
   }
 };
 
-void insAtStart(Node* &head,int val){
-     
-    Node* newNode=new Node(val);
-    newNode->next=head;
-    head=newNode;
+void updateAtK(Node* &head,int k,int val){
+
+    Node* temp=head;  
+
+    int currPos=0;
+    while(currPos!=k-1){
+        temp=temp->next;
+        currPos++;
+    }
+
+    temp->val=val;
 }
 
 void print(Node* head){
@@ -29,7 +36,7 @@ void print(Node* head){
     cout<<"NULL"<<endl;
 }
 
-/* int main(){
+int main(){
  
   Node* head=new Node(2);
  
@@ -42,33 +49,12 @@ void print(Node* head){
   Node* n3=new Node(8*2);
   n2->next=n3;
 
-//   cout<<head->val<<"->"
-//       <<n1->val<<"->"
-//       <<n2->val<<"->"
-//       <<n3->val<<"->"
-//       <<"NULL"<<endl;
-
- insAtStart(head,1);
+ print(head);
+ cout<<"\nafter modification:"<<endl;
+ updateAtK(head,2,22);
  print(head);
 
- insAtStart(head,000000);
- print(head);
-   
-
-} */
-
-//starting from nothing
-int main(){
- 
- Node* head=NULL;
-
- insAtStart(head,15);
- print(head);
-
- insAtStart(head,10);
- print(head);
-
- insAtStart(head,5);
+ updateAtK(head,4,23);
  print(head);
    
 

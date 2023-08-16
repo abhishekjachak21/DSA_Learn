@@ -65,7 +65,7 @@ void updatePos(node*head,int d,int k){            //update value of kth position
 
 void deleteH(node* &head){          //head deletion of node
     node*temp=head;
-    head=head->next;
+    head=temp->next;
     free(temp);
 }
 

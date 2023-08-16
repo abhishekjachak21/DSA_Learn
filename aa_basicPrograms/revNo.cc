@@ -8,7 +8,7 @@ int main(){
 
     while(n!=0){
         int rem = n % 10;       // get the last digit of n
-        temp = temp * 100 + rem; // add the last digit to the end of temp
+        temp = temp * 10 + rem; // add the last digit to the end of temp
         n /= 10;                // remove the last digit from n
     }
 

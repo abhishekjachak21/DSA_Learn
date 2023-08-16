@@ -289,22 +289,19 @@ still it is a wrong for long num*/
 
 
 ////Numerical rectangular pattern
-// int main()
-// {
-//  int n;
-//  cout<<"n: ";
-//  cin>>n;
+int main()
+{
+ int n;
+ cout<<"n: ";cin>>n;
 
-//  for(int i=1;i<=n;i++)
-//  {
-//   for(int j=i;j<=n;j++)
-//   {cout << j;}
-
-//   cout << endl ;
-//  }
-//  return 0;
-// }
-
+ for(int i=1;i<=n;i++){
+  for(int j=i;j<=n;j++)
+    cout << j;
+  cout << endl ;
+ }
+ return 0;
+//abcs is  
+}   
 
 
 ////two-side rectangular pattern

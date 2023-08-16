@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//1pm,23 July 2023
 class Node{
   public:
   int val;
@@ -12,11 +13,18 @@ class Node{
   }
 };
 
-void insAtStart(Node* &head,int val){
+void insAtEnd(Node* &head,int val){
      
     Node* newNode=new Node(val);
-    newNode->next=head;
-    head=newNode;
+
+    Node* temp=head;  
+
+    while(temp->next!=NULL)
+        temp=temp->next;
+    
+    temp->next=newNode;
+
+    newNode->next=NULL;
 }
 
 void print(Node* head){
@@ -29,7 +37,7 @@ void print(Node* head){
     cout<<"NULL"<<endl;
 }
 
-/* int main(){
+int main(){
  
   Node* head=new Node(2);
  
@@ -41,35 +49,31 @@ void print(Node* head){
 
   Node* n3=new Node(8*2);
   n2->next=n3;
+  
+  print(head);
 
-//   cout<<head->val<<"->"
-//       <<n1->val<<"->"
-//       <<n2->val<<"->"
-//       <<n3->val<<"->"
-//       <<"NULL"<<endl;
-
- insAtStart(head,1);
+ insAtEnd(head,17);
  print(head);
 
- insAtStart(head,000000);
- print(head);
-   
-
-} */
-
-//starting from nothing
-int main(){
- 
- Node* head=NULL;
-
- insAtStart(head,15);
- print(head);
-
- insAtStart(head,10);
- print(head);
-
- insAtStart(head,5);
+ insAtEnd(head,18);
  print(head);
    
 
 }
+
+//starting from nothing
+// int main(){
+ 
+//  Node* head=NULL;
+
+//  insAtStart(head,15);
+//  print(head);
+
+//  insAtStart(head,10);
+//  print(head);
+
+//  insAtStart(head,5);
+//  print(head);
+   
+
+// }

@@ -3,12 +3,13 @@
 using namespace std;
 
 class node{
+    
     public:
     string data;
     node* next;
 
-    node(string val){
-       data=val;
+    node(){      //node(string val)
+    //    data=val;
        next=NULL;
     }
 
