@@ -21,3 +21,5 @@ int main() {
 
     return 0;
 }
+git config --global user.email "abhishekjachak22@gmail.com"                            
+git config --global user.name "Abhishek Jachak"
