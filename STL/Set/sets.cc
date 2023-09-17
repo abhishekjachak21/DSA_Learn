@@ -3,11 +3,13 @@ using namespace std;
 
 int main ()
 {
-    set<int> my_set{2,7,4};
-
+    set<int> mySet{2,7,4};
+    mySet.insert(41);
+    
     set<int>::iterator it;
 
-    for (it=my_set.begin(); it!=my_set.end(); ++it)
-    cout << *it-1 <<" ";
-cout << '\n';
+    for (it=mySet.begin(); it!=mySet.end(); it++)
+      cout << (*it)-1 <<" ";
+
+cout << endl;
 }
