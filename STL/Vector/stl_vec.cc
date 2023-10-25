@@ -8,32 +8,34 @@ using namespace std;
 int main(){
    vector<int>vec;
 
-  for(int i=1;i<=17;i++){
+  for(int i=1;i<=8;i++){
    vec.push_back(i);
    cout<<"Vec size:" <<vec.size()<<endl;
    cout<<"Vec Capacity:" <<vec.capacity()<<endl;
   }
   cout<<endl ;
 
-   for(int i=0;i<17;i++)
-   cout<<vec[i]<<" ";
+   for(int i=0;i<8;i++)
+   cout<<2*vec[i]<<" ";
    cout<<endl<<endl ;
 
    cout<<"Vec size:" <<vec.size()<<endl;
-   cout<<"Vec Capacity:" <<vec.capacity()<<endl;
+   cout<<"Vec Capacity:" <<vec.capacity()<<endl<<endl;
 
-   vector<int>::iterator
-    iter = vec.begin();
-   vec.insert(iter,2,5667);
+   vector<int>::iterator iter = vec.begin();
+   vec.insert(iter,2,546);  //it fills up ele till index 2,no great
 
-   for(int i=0;i<17;i++)
+   vec.insert(vec.begin()+4,21);   //this is more useful
+
+   for(int i=0;i<8;i++)
    cout<<vec[i]<<" ";
    cout<<endl<<endl ;
 
-   for(int i=0;i<17;i++)
+   for(int i=0;i<8;i++)
    cout<<vec.at(i)<<" ";
    cout<<endl<<endl ;
 
+cout<<vec.at(1)<<" "<<vec[2]<<endl;
   return 0;
 
 }

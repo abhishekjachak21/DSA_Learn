@@ -108,30 +108,32 @@ using namespace std ;
 
 //------------
 // ///vectors
-// void printVec(vector<int> v){
-//      cout<<"\nSize: "<<v.size()<<" "<<v.capacity()<<endl;
-//      cout<<"YourVector: ";
-// for(int i=0;i<v.size();i++){
-//      cout<<v[i]<<" ";}}
+void printVec(vector<int> v){
+     cout<<"\nSize & Cap: "<<v.size()<<" "<<v.capacity()<<endl;
+     cout<<"YourVector: ";
+for(int i=0;i<v.size();i++){
+     cout<<v[i]<<" ";}}
 
-// int main(){
+int main(){
 
-//     vector<int>v;
-//     int n;
-//     cout<<"\nEnter n: ";cin>>n;
-//     for(int i=0;i<n;i++){
-//      int b;
-//      cout<<"\nEnter element: ";cin>>b;
-//      v.push_back(b);}
-//      printVec(v);
-//     v.pop_back();  //del from end
-//      printVec(v);
+    vector<int>v;
+    int n;
+    cout<<"\nEnter n: ";cin>>n;
 
-//      vector<int> &w=v;   ///copyinto v into w
-//      w.push_back(34);
-//      printVec(w);
-//   return 0;
-// }
+    for(int i=0;i<n;i++){
+    int b;
+    cout<<"\nEnter element: ";cin>>b;
+    v.push_back(b);
+    }
+    printVec(v);
+    v.pop_back();  //del from end
+    printVec(v);
+
+     vector<int> &w=v;   ///copyinto v into w
+     w.push_back(34);
+     printVec(w);
+  return 0;
+}
 //------------
 
 
