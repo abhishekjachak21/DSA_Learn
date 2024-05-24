@@ -23,11 +23,41 @@ void print(Node* head){
     
     Node* temp= head;
     while(temp!=NULL){
-        cout<<temp->val<<"->";
+        cout<<temp->val;
         temp=temp->next;
+        if (temp != NULL) {
+            cout << " -> ";
+        }
+
     }
-    cout<<"NULL"<<endl;
+    cout << endl;
+    // cout<<"NULL"<<endl;
 }
+
+
+
+//starting from nothing
+int main(){
+ 
+ Node* head=NULL;
+
+ insAtStart(head,15);
+ print(head);
+
+ insAtStart(head,10);
+ print(head);
+
+ insAtStart(head,5);
+ insAtStart(head,4);
+ insAtStart(head,23);
+ insAtStart(head,61);
+ insAtStart(head,98);
+ print(head);
+   
+
+}
+
+
 
 /* int main(){
  
@@ -56,20 +86,3 @@ void print(Node* head){
    
 
 } */
-
-//starting from nothing
-int main(){
- 
- Node* head=NULL;
-
- insAtStart(head,15);
- print(head);
-
- insAtStart(head,10);
- print(head);
-
- insAtStart(head,5);
- print(head);
-   
-
-}

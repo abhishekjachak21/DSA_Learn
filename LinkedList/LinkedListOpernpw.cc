@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std ;
 
-
+/*
 //--------April Month----------------------------------------------
 //insertion at end,at kth position,updation of kth node
 class node{
@@ -92,7 +92,7 @@ int main(){
   display(head);
 }
 //------------------------------------------------------
-
+*/
 
 
 
@@ -146,7 +146,7 @@ int main(){
 
 
 
-
+*/
 
 //------------------------------------------------------
 //Traversing Singly LL
@@ -166,7 +166,7 @@ int main(){
  cout<<n->val<<" "<<n->next<<endl;
 }
 //------------------------------------------------------
-*/
+
 
 
 
