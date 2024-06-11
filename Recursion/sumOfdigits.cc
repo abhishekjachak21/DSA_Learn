@@ -3,9 +3,9 @@ using namespace std;
 
 
 
-int f(int n){
+int sumOfDig(int n){
     if(n>=0 && n<=9) return n;
-    return f(n/10) + n%10;
+    return sumOfDig(n/10) + n%10;
 }
 
 
@@ -14,7 +14,7 @@ int main(){
     int n;
     cout<<"Enter no: ";
     cin>>n;
-    int sum = f(n);
+    int sum = sumOfDig(n);
     cout<<"Sum of digit: " << sum << endl;
 }
 
