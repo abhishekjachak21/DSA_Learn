@@ -6,3 +6,10 @@ On 18June2024,
     5 algo aur 5 ds pehle phase mei nipta dunga, pehle ke 30 din mei...
 
 I will try my everything to complete this 100Q in 30 days.
+
+# Array
+-> Sliding Window
+-> Two pointer
+-> Prefix sum approach
+-> Hashing
+-> DP
