@@ -1,36 +1,39 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-// #include<bits/stdc++.h>
 
-void selectSort(int arr[]){
- int n=sizeof(arr)/sizeof(arr[0]);
-   for(int i=0;i<n;i++){
-    int min_idx=i;
-    for(int j=i+1;j<n;j++){
-      if(arr[j]<arr[min_idx]){ 
-        j=min_idx;
-        swap(arr[j],arr[min_idx]);
+void selectionSort(int arr[], int n) {
+
+    for (int i = 0; i <= n - 2; i++) {
+        int mini = i;
+        for (int j = i ; j <= n-1; j++) {
+            if (arr[j] < arr[mini]) {
+                mini = j;
+            }
+        }
+        // swap(arr[mini], arr[i]);
+        int temp = arr[mini];
+        arr[mini] = arr[i];
+        arr[i]=temp;
     }
-   }
-
-  for(int i:arr) cout<<i<<" ";
-
-
 }
 
+int main() {
+    int arr[] = {9, 3, -5, 1, 8};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-int main(){
-
-    int arr[]={9,3,-5,1,8};
-
-cout<<"Unsorted arr: ";
+    cout << "Unsorted array => ";
     for(int i:arr) cout<<i<<" ";
+    cout << endl;
 
-cout<<"Sorted arr: ";
-    selectSort(arr);
-    
+    selectionSort(arr, n);
 
+    cout << "Sorted array => ";
+    for(int i:arr) cout<<i<<" ";
+    cout << endl << " Thank You! " << endl;
+
+    return 0;
 }
+
 
 
 // void print(int arr[], int n)
@@ -104,17 +107,17 @@ cout<<"Sorted arr: ";
 
 // void selectionSort(int array[], int size) {
 //   for (int step = 0; step < size - 1; step++) {
-//     int min_idx = step;
+//     int mini = step;
 //     for (int i = step + 1; i < size; i++) {
 
 //       // To sort in descending order, change > to < in this line.
 //       // Select the minimum element in each loop.
-//       if (array[i] < array[min_idx])
-//         min_idx = i;
+//       if (array[i] < array[mini])
+//         mini = i;
 //     }
 
 //     // put min at the correct position
-//     swap(&array[min_idx], &array[step]);
+//     swap(&array[mini], &array[step]);
 //   }
 // }
 
