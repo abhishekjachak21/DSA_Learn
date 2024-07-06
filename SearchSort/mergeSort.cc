@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+//TC-> O(nlogn)
+//SC-> O(n)
+
 
 void merge(vector<int> &arr, int low, int mid, int high) {
     vector<int> temp; // temporary array

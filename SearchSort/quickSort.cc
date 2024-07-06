@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
+//TC-> O(nlogn)
+//SC-> O(1)
 
 int partition(vector<int> &arr, int low, int high) {
     int pivot = arr[low];
