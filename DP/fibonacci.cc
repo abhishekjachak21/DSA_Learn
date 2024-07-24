@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>  //source: 102 lec babbar(18june2024)
 using namespace std;
 
-
-
+//-----------------------------------------------------------------------
+///DP se problem solve kiya hu
 int fib(int n, vector<int> dp) {
     if (n <= 1) return n;
     if (dp[n] != -1) return dp[n];
@@ -16,8 +16,25 @@ int main() {
     cout << "Fibonacci number: " << fib(n, dp) << endl;
     return 0;
 }
+//-----------------------------------------------------------------------
 
 
+
+
+//-----------------------------------------------------------------------
+///Recursion se solve kiya hu
+int fib(int n) {
+    if (n <= 1) return n; // Base case: fib(0) = 0, fib(1) = 1
+    return fib(n - 1) + fib(n - 2); // Recursive case
+}
+
+int main() {
+    int n; 
+    cin >> n; // Example input
+    cout << "Fibonacci number: " << fib(n) << endl;
+    return 0;
+}
+//-----------------------------------------------------------------------
 
 
 
