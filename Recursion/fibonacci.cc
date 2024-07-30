@@ -7,24 +7,24 @@ using namespace std;
 //-----------------------------------------------------------------------
 //space optimization se //form-5
 
-int fibonacci(int n){  
-    int prev1 = 1, prev2 = 0;
-    if(n==0) return prev2;
-    if(n==1) return prev1;
+// int fibonacci(int n){  
+//     int prev1 = 1, prev2 = 0;
+//     if(n==0) return prev2;
+//     if(n==1) return prev1;
 
-    for(int i=2;i<=n;i++) {
-        int curr = prev1  + prev2;
-        prev2 = prev1;
-        prev1 = curr;
-    }
-    return prev1; 
-}
+//     for(int i=2;i<=n;i++) {
+//         int curr = prev1  + prev2;
+//         prev2 = prev1;
+//         prev1 = curr;
+//     }
+//     return prev1; 
+// }
 
-int main(){
-    int n;cin>>n;
-    cout<<"Fibonacci no at index "<<n<<" is: "<<fibonacci(n)<<endl;
-    return 0;
-}
+// int main(){
+//     int n;cin>>n;
+//     cout<<"Fibonacci no at index "<<n<<" is: "<<fibonacci(n)<<endl;
+//     return 0;
+// }
 //-----------------------------------------------------------------------
 
 
@@ -52,8 +52,8 @@ int main(){
 
 
 //-----------------------------------------------------------------------
-//khud se , //form-3
-// vector<int>dp(7,-1);
+//khud se //memoization se, //form-3
+/////vector<int>dp(7,-1);
 
 // int fibonacci(int n, vector<int>&dp){  //& unnecessary copies hone nhi deta
 //     if(n==0) return 0;
@@ -114,3 +114,23 @@ int main(){
 
 
 
+//-----------------------------------------------------------------------
+////fraz dsa course
+
+int fibonacci(int n, vector<int>&dp){  //& unnecessary copies hone nhi deta
+    if(n==0 || n==1) return n;
+    if(dp[n] != -1) return dp[n];
+    int fib1 = fibonacci(n-1, dp);
+    int fib2 = fibonacci(n-2, dp);
+    int ans = fib1 + fib2 ;
+    dp[n] = ans;
+    return dp[n];
+}
+
+int main(){
+    int n;cin>>n;
+    vector<int>dp(n+1,-1);
+    cout<<"Fibonacci no at index "<<n<<" is: "<<fibonacci(n,dp)<<endl;
+    return 0;
+}
+//-----------------------------------------------------------------------
