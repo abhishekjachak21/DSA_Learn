@@ -26,7 +26,7 @@ int main()
       int mid=(s+e)/2 ; 
 
       if(arr[mid]==key)
-         {cout << "Mid ele at index: " << mid ; exit(0);}
+         {cout << "\nMid ele at index: " << mid ; exit(0);}
 
       else if(arr[mid]>key) e=mid-1;
 
